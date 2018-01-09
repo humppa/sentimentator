@@ -5,12 +5,11 @@ from sentimentator.app import app
 from sentimentator.model import db, Language, Sentence
 
 
+with open('en_lines.txt') as File:
+    en_data = File.readlines()
+
 DADA = {
-    'en': [
-        'Example sentence',
-        'Another sentence',
-        'A third example sentence',
-    ],
+    'en': en_data,
     'fi': [
         'Tämä on testivirke',
         'Toinen testivirke',
